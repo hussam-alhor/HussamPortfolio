@@ -59,7 +59,7 @@ const Contact = () => {
            ref={form} 
            onSubmit={sendEmail}
          >
-          <motion.h1 variants={listVariant} className="cTitle">Les's keep in touch</motion.h1>
+          <motion.h1 variants={listVariant} className="cTitle">Let's keep in touch</motion.h1>
           <motion.div variants={listVariant} className="formItem">
             <label>Name</label>
             <input type="text" name='user-name' placeholder='Your Name' />
