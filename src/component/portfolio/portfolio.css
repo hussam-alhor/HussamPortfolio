@@ -81,6 +81,15 @@
     }
 }
 @media (max-width: 1024px){
+    .portfolio {
+        height: auto;
+        overflow-x: hidden;
+    }
+    .pList {
+        flex-direction: column;
+        position: static;
+        height: auto;
+    }
     .pItem{
        flex-direction: column;
     }
@@ -90,7 +99,7 @@
     }
     .pProgress{
         bottom: 100px;
-        left: 100%;
+        left: 80%;
     }
 }
 @media (max-width: 768px){

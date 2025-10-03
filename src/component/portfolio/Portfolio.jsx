@@ -108,14 +108,22 @@ const ListItems = ({ item }) => {
 
 const Portfolio = () => {
   const [containerDestance, setContainerDestance] = useState(0)
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024)
   const ref = useRef()
 
   useEffect(() => {
     if (ref.current) {
       const rect = ref.current.getBoundingClientRect()
-
       setContainerDestance(rect.left)
     }
+  }, [])
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
 
   const { scrollYProgress } = useScroll({ target: ref })
@@ -124,42 +132,54 @@ const Portfolio = () => {
     [0, 1],
     [0, -window.innerWidth * items.length]
   )
+  const yTranslate = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, -window.innerHeight * (items.length - 1)]
+  )
   return (
     <div className="portfolio" ref={ref}>
-      <motion.div className="pList" style={{ x: xTranslate }}>
-        <div
-          className="empty"
-          style={{ width: window.innerWidth - containerDestance }}
-        />
+      <motion.div className="pList" style={isMobile ? {} : { x: xTranslate }}>
+        {!isMobile && (
+          <div
+            className="empty"
+            style={{ width: window.innerWidth - containerDestance }}
+          />
+        )}
         {
           items.map(item => (
             <ListItems item={item} key={item.id} />
           ))
         }
       </motion.div>
-      <section />
-      <section />
-      <section />
-      <section />
-      <section />
+      {!isMobile && (
+        <>
+          <section />
+          <section />
+          <section />
+          <section />
+          <section />
+        </>
+      )}
       <div className="pProgress">
         <svg width="100%" height="100%" viewBox="0 0 80 80">
-          <circle 
-            cx="40" 
-            cy="40" 
-            r="35" 
-            fill="none" 
-            stroke="#ddd" 
-            strokeWidth="10" 
+          <circle
+            cx="40"
+            cy="40"
+            r="35"
+            fill="none"
+            stroke="#ddd"
+            strokeWidth="10"
           />
-          <motion.circle 
-            cx="40" 
-            cy="40" 
-            r="35" 
-            fill="none" 
-            stroke="#dd4c62" 
-            strokeWidth="10" 
-            style={{pathLength: scrollYProgress}}
+          <motion.circle
+            cx="40"
+            cy="40"
+            r="35"
+            fill="none"
+            stroke="#dd4c62"
+            strokeWidth="10"
+            strokeDasharray="219.911"
+            style={{ strokeDashoffset: useTransform(scrollYProgress, [0, 1], [219.911, 0]) }}
             transform="rotate(-90 40 40)"
           />
         </svg>

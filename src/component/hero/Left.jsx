@@ -23,7 +23,7 @@ const Left = () => {
              initial='initial'
              animate='animate'
              className="awards">
-              <motion.h2  variants={awardVariants}>MERN Stack Devloper</motion.h2>
+              <motion.h2  variants={awardVariants}>MERN Stack Developer</motion.h2>
               <motion.p  variants={awardVariants}>Award-winning designer with a passion for creating impactful digital experiences.</motion.p>
               <motion.div  variants={awardVariants} className="awardList">
                 <motion.img  variants={awardVariants} src="/mongo.png" alt="" />

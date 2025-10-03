@@ -39,7 +39,7 @@ const Right = () => {
             <img src="/linked.png" alt="" />
           </motion.a>
           <motion.div  variants={followVariants} className="followTextContainer">
-            <div className="followText">FOLLW ME</div>
+            <div className="followText">FOLLoW ME</div>
           </motion.div>
         </motion.div>
         {/* Bubble speech */}
@@ -87,7 +87,7 @@ const Right = () => {
                 d="M 100,100 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0"
               />
               <text className="circleText">
-                <textPath href="#innerCirclePath">Hire Now .</textPath>
+                <textPath href="#innerCirclePath">Hiring  Now .</textPath>
               </text>
               <text className="circleText">
                 <textPath href="#innerCirclePath" startOffset="44%">

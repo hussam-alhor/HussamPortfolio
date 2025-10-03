@@ -14,7 +14,7 @@ const Speech = () => {
           sequence={[
             // Same substring at the start will only be typed out once, initially
             1000,
-            'Evry idea transform into an application',
+            'Every idea transform into an application',
             1000, // wait 1s before replacing "Mice" with "Hamsters"
             'and every line crafts a unique experince',
             1000,
