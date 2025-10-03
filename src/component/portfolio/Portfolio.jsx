@@ -14,6 +14,7 @@ const items = [
     id: 2,
      img: "/delevAPP.png",
     title: "delivery APP",
+    type:"(Full-Sack App)",
     desc: "The delivery app is a complete system provided to the app owner, the user, and the driver.In the driver app, the user can log in as a driver to see available orders. He can accept the order so that the customer can track the driver's location on a map in real time. The driver also receives notifications of new orders.The user creates the order and specifies its location on the map in real time. The user receives a notification when their order is accepted and when the driver approaches the location.",
     link: "/"
     

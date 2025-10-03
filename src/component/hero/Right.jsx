@@ -39,7 +39,7 @@ const Right = () => {
             <img src="/linked.png" alt="" />
           </motion.a>
           <motion.div  variants={followVariants} className="followTextContainer">
-            <div className="followText">FOLLoW ME</div>
+            <div className="followText">FOLLOW ME</div>
           </motion.div>
         </motion.div>
         {/* Bubble speech */}
