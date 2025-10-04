@@ -193,6 +193,7 @@
     }
     .counterList {
         /* flex-direction: column; */
+        padding: 30px 20px 0px;
         gap: 1rem;
         width: 100%;
     }
