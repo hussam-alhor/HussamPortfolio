@@ -1,5 +1,6 @@
 import { lazy , Suspense } from 'react'
 import { PropagateLoader } from 'react-spinners'
+import LoadingFallback from './component/LoadingFallback'
 // import Contact from './component/contact/Contact'
 // import Hero from './component/hero/Hero'
 // import Portfolio from './component/portfolio/Portfolio'
@@ -10,25 +11,6 @@ const Contact = lazy(()=> import("./component/contact/Contact"))
 const Portfolio = lazy(()=> import("./component/portfolio/Portfolio"))
 const ServicesSection = lazy(()=> import("./section/ServicesSection"))
 
-const LoadingFallback = ({ height = "100vh" }) => (
-  <div 
-    style={{ 
-      height, 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center' 
-    }}
-  >
-    <PropagateLoader
-                color={"white"}
-                loading={true}
-                // cssOverride={override}
-                size={30}
-                aria-label="Loading Spinner"
-                data-testid="loader"
-              />
-  </div>
-)
 
 const App = () => {
   return (

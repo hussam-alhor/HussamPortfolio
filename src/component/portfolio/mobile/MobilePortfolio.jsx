@@ -1,8 +1,11 @@
 import React, { useRef } from 'react'
-import MobileCard from './MobileCard';
+import { lazy , Suspense } from 'react'
+// import MobileCard from './MobileCard';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { items } from '../data';
 import "./MobileCard.css"
+import LoadingFallback from '../../LoadingFallback';
+const MobileCard = lazy(()=> import("./MobileCard"))
 
 const MobilePortfolio = () => {
     const ref = useRef();
@@ -15,7 +18,9 @@ const MobilePortfolio = () => {
         <div>
             {items.map((item, index) => (
                 <section key={item.id} className="mobile-portfolio-section">
-                    <MobileCard item={item} index={index} />
+                     <Suspense fallback={<LoadingFallback />}>
+                         <MobileCard item={item} index={index} />
+                     </Suspense>
                 </section>
             ))}
             <div className="pProgress">
