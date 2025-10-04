@@ -420,7 +420,7 @@ const MobilePortfolio = () => {
             </div>
 
             <div className="mobile-nav">
-                <button onClick={handlePrev}>‹</button>
+                {/* <button onClick={handlePrev}>‹</button> */}
                 <div className="mobile-dots">
                     {items.map((_, index) => (
                         <span
@@ -430,7 +430,7 @@ const MobilePortfolio = () => {
                         />
                     ))}
                 </div>
-                <button onClick={handleNext}>›</button>
+                {/* <button onClick={handleNext}>›</button> */}
             </div>
         </div>
     );
