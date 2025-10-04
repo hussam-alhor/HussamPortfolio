@@ -1,4 +1,4 @@
-.portfolio {
+/* .portfolio {
     height: 600vh;
     position: relative;
 }
@@ -108,4 +108,242 @@
        height: 50px;
     }
 }
+ */
 
+
+ /* ================================== */
+/* === Desktop Portfolio Styles === */
+/* ================================== */
+.portfolio {
+    height: 600vh;
+    position: relative;
+}
+.pList {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 100vh;
+    width: max-content;
+}
+.pItem{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+.pItem:nth-child(1){ background: linear-gradient(to right, #12071f, #210b3a); }
+.pItem:nth-child(2){ background: linear-gradient(to right, #210b3a, #27084a); }
+.pItem:nth-child(3){ background: linear-gradient(to right, #27084a, #220345); }
+.pItem:nth-child(4){ background: linear-gradient(to right, #220345, #2a0159); }
+.pItem:nth-child(5){ background: linear-gradient(to right, #2a0159, #12071f); }
+.pProgress{
+    position: sticky;
+    width: 80px;
+    height: 80px;
+    left: 0;
+    bottom: 80%; /* هذا كان تنسيقك الأصلي وقد يختلف عن top 50% قليلاً */
+}
+.pImg {
+    width: 40%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.pImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pText {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.pText h1{ font-size: 56px; }
+.pText p{ font-weight: 300; }
+.pText a button{
+    background-color: pink;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* ================================== */
+/* === Mobile Portfolio Styles  === */
+/* ================================== */
+.mobile-portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, #12071f, #27084a);
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.mobile-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    height: 100%;
+}
+.mobile-img-container {
+    width: 100%;
+    max-width: 350px;
+    /* height: 35vh; */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.mobile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.mobile-text-container {
+    text-align: center;
+    color: white;
+    max-height: 40vh;
+    overflow-y: auto;
+    padding: 0 10px;
+}
+.mobile-text-container h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.mobile-text-container .type {
+    font-size: 14px;
+    color: #ffc0cb;
+    margin-bottom: 16px;
+    font-style: italic;
+}
+.mobile-text-container .desc {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+.mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    position: absolute;
+    bottom: 30px;
+}
+.mobile-nav button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+.mobile-nav button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.mobile-dots {
+    display: flex;
+    gap: 10px;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.dot.active {
+    background-color: #dd4c62;
+    transform: scale(1.3);
+}
+
+
+/* mauns */
+/* تعديلات على CSS لمكون الموبايل الجديد */
+
+.mobile-portfolio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* مهم جداً */
+}
+
+/* حاوية لإخفاء الشرائح التي تقع خارج العرض */
+.mobile-slider-viewport {
+    flex-grow: 1;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* الحاوية التي تتحرك وتحمل جميع الشرائح */
+.mobile-slider-track {
+    display: flex;
+    height: 100%;
+    /* العرض الإجمالي هو 100% مضروباً في عدد الشرائح */
+    /* مثال: 5 شرائح = عرض 500% */
+}
+
+/* كل شريحة تأخذ العرض الكامل للحاوية */
+.mobile-slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0; /* مهم لمنع الشرائح من التقلص */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.mobile-img-container {
+    width: 100%;
+    max-width: 300px; /* يمكنك تعديل هذا الرقم */
+    margin-bottom: 20px;
+}
+
+.mobile-img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.mobile-text-container {
+    text-align: center;
+}
+
+/* (ملاحظة: أنماط mobile-nav و dots تبقى كما هي على الأغلب) */
+
+
+/* Media Queries for Desktop - From your original CSS */
+@media (max-width: 1536px){
+    .pItem{
+        gap: 50px;
+    }
+}
+@media (max-width: 1280px){
+    .pText h1{
+        font-size: 48px;
+    }
+}
+/* No need for the max-width: 1024px media query to change the structure anymore */
