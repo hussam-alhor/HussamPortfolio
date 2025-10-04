@@ -224,9 +224,12 @@
    .hSection.right {
     justify-content: end;
    }
-   .follow,
    .bubbleContainer,
    .certificate{
     display: none;
+   }
+   .follow{
+    position: absolute;
+    top: 0;
    }
 }

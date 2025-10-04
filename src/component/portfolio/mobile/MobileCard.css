@@ -1,0 +1,206 @@
+/* ================================== */
+/* === Mobile Portfolio Styles === */
+/* ================================== */
+.mobile-portfolio-section {
+    height: 100vh;
+    scroll-snap-align: start;
+    width: 100%;
+}
+
+.mobile-card {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-card-img-container {
+    width: 90%;
+    /* max-width: 400px; */
+    /* height: 300px; */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mobile-card-text-container {
+    text-align: center;
+    color: white;
+    max-width: 500px;
+    padding: 0 20px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mobile-card-text-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-card-text-container .type {
+    font-size: 1.1rem;
+    color: #ffc0cb;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.mobile-card-text-container .desc {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #e0e0e0;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-progress {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.mobile-progress svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+
+/* ================================== */
+/* === Media Queries === */
+/* ================================== */
+@media (max-width: 1536px) {
+    .pItem {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .pText h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .portfolio {
+        height: auto;
+        overflow-x: hidden;
+        display: none; /* إخفاء الديسكتوب في الموبايل */
+    }
+    
+    .pList {
+        flex-direction: column;
+        position: static;
+        height: auto;
+    }
+    
+    .pItem {
+        flex-direction: column;
+        height: auto;
+        padding: 80px 0;
+    }
+    
+    .pImg,
+    .pText {
+        width: 80%;
+    }
+    
+    .pProgress {
+        bottom: 10px;
+        left: 80%;
+    }
+    
+    /* إظهار الموبايل */
+    .mobile-portfolio-section {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .pProgress {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .mobile-card {
+        gap: 30px;
+        padding: 50px 15px;
+    }
+    
+    /* .mobile-card-img-container {
+        height: 250px;
+        max-width: 350px;
+    } */
+    
+    .mobile-card-text-container h1 {
+        font-size: 1.8rem;
+    }
+    
+    .mobile-card-text-container .type {
+        font-size: 1rem;
+    }
+    
+    .mobile-card-text-container .desc {
+        font-size: 1rem;
+    }
+    
+    .mobile-progress {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-card {
+        gap: 0px;
+        padding: 30px 10px;
+    }
+    
+    /* .mobile-card-img-container {
+        height: 200px;
+    } */
+    
+    .mobile-card-text-container h1 {
+        font-size: 1.6rem;
+    }
+    
+    .mobile-progress {
+        width: 45px;
+        height: 45px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (min-width: 1025px) {
+    /* إخفاء الموبايل في الديسكتوب */
+    .mobile-portfolio-section {
+        display: none;
+    }
+    
+    /* إظهار الديسكتوب */
+    .portfolio {
+        display: block;
+    }
+}

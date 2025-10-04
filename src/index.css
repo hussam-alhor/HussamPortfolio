@@ -9,11 +9,6 @@ html {
   scroll-behavior: smooth;
 }
 
-@media (max-width: 1024px) {
-  html {
-    scroll-snap-type: none;
-  }
-}
 
 body {
     background: linear-gradient(to bottom, #12071f , #2f204e);
