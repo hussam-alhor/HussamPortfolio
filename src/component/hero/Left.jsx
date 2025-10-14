@@ -15,7 +15,7 @@ const Left = () => {
             >
               Hey There,
               <br />
-              <span>I’m Hussam</span>
+              <span>I’m Hussam Alhor</span>
             </motion.h1>
             {/* awards */}
             <motion.div
