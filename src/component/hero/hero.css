@@ -233,3 +233,10 @@
     top: 0;
    }
 }
+
+@media (max-width : 350px ){
+    
+    .bg{
+        height: 50%;
+    }
+}
